@@ -1,0 +1,72 @@
+\documentclass[11pt]{article}
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+\usepackage{amsmath}
+ 
+\floatname{algorithm}{Algorithm outline}
+% \renewcommand{\algorithmicrequire}{\textbf{a}}
+% \renewcommand{\algorithmicensure}{\textbf{a}}
+ 
+\begin{document}
+    \begin{algorithm}
+        \caption{}
+        \begin{algorithmic}[1] %a
+            \State Allocate an id(integer) to all words in corpus. 
+            \State  $\{"word", 50d-word-vector\}$
+            \State $\{"apple":0, "grape":1,"you":2,…., "eat":72600,...\}$
+            \State Every tweet text to a word index(id) sequence.
+            \State "you eat grape"$\rightarrow [2,72600,1]$
+            \State Word Embedding file $\{"word", 50d-word-vector\}$
+            \State $\{$"apple":[0.93,0,…,0], "grape":[0.91,0,…,0]$\}$
+            \State Generate a weight matrix and load into the model's Embedding layer.
+            \State \begin{equation}\nonumber
+                W=\begin{bmatrix}
+                0.93 & 0.91 & \hdots \\
+                \vdots & \vdots
+                \end{bmatrix}
+                \end{equation}
+
+\State Use model to train and predict
+
+            % \Require $Array$a$n$a
+            % \Ensure a
+            % \Function {MergerSort}{$Array, left, right$}
+            %     \State $result \gets 0$
+            %     \If {$left < right$}
+            %         \State $middle \gets (left + right) / 2$
+            %         \State $result \gets result +$ \Call{MergerSort}{$Array, left, middle$}
+            %         \State $result \gets result +$ \Call{MergerSort}{$Array, middle, right$}
+            %         \State $result \gets result +$ \Call{Merger}{$Array,left,middle,right$}
+            %     \EndIf
+            %     \State \Return{$result$}
+            % \EndFunction
+            % \State
+            % \Function{Merger}{$Array, left, middle, right$}
+            %     \State $i\gets left$
+            %     \State $j\gets middle$
+            %     \State $k\gets 0$
+            %     \State $result \gets 0$
+            %     \While{$i<middle$ \textbf{and} $j<right$}
+            %         \If{$Array[i]<Array[j]$}
+            %             \State $B[k++]\gets Array[i++]$
+            %         \Else
+            %             \State $B[k++] \gets Array[j++]$
+            %             \State $result \gets result + (middle - i)$
+            %         \EndIf
+            %     \EndWhile
+            %     \While{$i<middle$}
+            %         \State $B[k++] \gets Array[i++]$
+            %     \EndWhile
+            %     \While{$j<right$}
+            %         \State $B[k++] \gets Array[j++]$
+            %     \EndWhile
+            %     \For{$i = 0 \to k-1$}
+            %         \State $Array[left + i] \gets B[i]$
+            %     \EndFor
+            %     \State \Return{$result$}
+            % \EndFunction
+        \end{algorithmic}
+    \end{algorithm}
+\end{document}
